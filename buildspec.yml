@@ -1,0 +1,7 @@
+version: 1.0
+
+phases:
+    install:
+        commands:
+            # Install npm dependencies
+            - npm install
