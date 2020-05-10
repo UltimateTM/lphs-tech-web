@@ -1,0 +1,12 @@
+{
+  "name": "precise-mds-web",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0"
+  }
+}
