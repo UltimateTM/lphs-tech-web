@@ -1,0 +1,11 @@
+$default-margin:    0;
+$default-padding:   0;
+
+html, body {
+  margin: $default-margin;
+  padding: $default-padding;
+}
+
+h2 {
+    color: red;
+}

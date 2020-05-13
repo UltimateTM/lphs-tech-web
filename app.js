@@ -1,39 +1,28 @@
-var port = process.env.PORT || 3000,
-    http = require('http'),
-    fs = require('fs'),
-    html = fs.readFileSync('index.html');
+const express = require("express");
+const path = require("path");
+const sassMiddleware = require("node-sass-middleware");
+require("dotenv").config();
 
-var log = function(entry) {
-    fs.appendFileSync('/tmp/sample-app.log', new Date().toISOString() + ' - ' + entry + '\n');
-};
+const app = express();
+const port = process.env.PORT || 3000;
 
-var server = http.createServer(function (req, res) {
-    if (req.method === 'POST') {
-        var body = '';
+app.set("view engine", "ejs");
 
-        req.on('data', function(chunk) {
-            body += chunk;
-        });
+app.use(
+    sassMiddleware({
+        src:            path.join(__dirname, "/static/sass"),
+        dest:           path.join(__dirname, "/static/css"),
+        debug:          false,
+        outputStyle:    "compressed",
+        prefix:         "/static/css"
+    })
+);
 
-        req.on('end', function() {
-            if (req.url === '/') {
-                log('Received message: ' + body);
-            } else if (req.url === '/scheduled') {
-                log('Received task ' + req.headers['x-aws-sqsd-taskname'] + ' scheduled at ' + req.headers['x-aws-sqsd-scheduled-at']);
-            }
+app.use("/static", express.static(path.join(__dirname, "/static")));
 
-            res.writeHead(200, 'OK', {'Content-Type': 'text/plain'});
-            res.end();
-        });
-    } else {
-        res.writeHead(200);
-        res.write(html);
-        res.end();
-    }
+app.get("/", function(req, res) {
+    res.render("pages/index");
 });
 
-// Listen on port 3000, IP defaults to 127.0.0.1
-server.listen(port);
-
-// Put a friendly message on the terminal
-console.log('Server running at http://127.0.0.1:' + port + '/');
+// Start serving files, IP defaults to 127.0.0.1
+app.listen(port, () => console.log(`Server listening at http://127.0.0.1:${port}/`));
