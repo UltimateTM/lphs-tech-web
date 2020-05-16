@@ -1,0 +1,83 @@
+$carolina-blue: #42A2E2;
+$prussian-blue: #003459;
+$gainsboro:     #DCE1E9;
+$ash-grey:      #B4B8AB;
+$ivory:         #F4F9E9;
+
+$banner-max-height: 500px;
+
+.btn-color {
+    background-color: $prussian-blue;
+    border-color: $prussian-blue;
+}
+
+.btn-color:hover {
+    background-color: $gainsboro;
+    color: $prussian-blue;
+}
+
+#banner {
+    background-color: $carolina-blue;
+    max-height: $banner-max-height;
+    padding: 0;
+}
+
+#banner img {
+    max-height: $banner-max-height;
+}
+
+#subbanner {
+    margin: 0;
+    padding-left:   18%;
+    padding-right:  18%;
+    padding-top:    20px;
+    padding-bottom: 20px;
+    background-color: $prussian-blue;
+    color: white;
+}
+
+#subbanner div {
+    padding: 0;
+}
+
+#subbanner div * {
+    display: inline-block;
+}
+
+#subbanner img {
+    width: 30px;
+    padding-right: 5px;
+}
+
+#subbanner p {
+    margin: 0;
+}
+
+.card-header {
+    background-color: $carolina-blue;
+    color: white;
+}
+
+.card-header * {
+    font-weight: 700;
+}
+
+// Below large devices
+@media (max-width: 991px) {
+    .card-override {
+        -ms-flex: auto !important;
+        flex: auto !important;
+        margin-bottom: 15px !important;
+        display: block !important;
+    }
+}
+
+// Above large devices
+@media (min-width: 992px) {  
+    .card-override {
+        -ms-flex: 1 0 0% !important;
+        flex: 1 0 0% !important;
+        margin-bottom: 0 !important;
+        display: inline-block;
+    }
+}

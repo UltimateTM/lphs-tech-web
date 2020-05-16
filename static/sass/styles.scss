@@ -1,0 +1,51 @@
+$default-font-family:   'Lato', sans-serif;
+$default-margin:        0;
+$default-padding:       0;
+$font-size-xs:          0.8rem;
+$font-size-sm:          1rem;
+$font-size-md:          1.15rem;
+$font-size-lg:          1.3rem;
+$font-size-xl:          1.45rem;
+$navbar-padding:        4rem;
+
+* {
+    font-family: $default-font-family;
+}
+
+html, body {
+    font-size: $font-size-xs;
+    margin: $default-margin;
+    padding: $default-padding;
+}
+
+body {
+    padding-top: $navbar-padding;
+}
+
+// Small devices
+@media (min-width: 544px) {  
+    html {
+        font-size: $font-size-sm;
+    } 
+}
+
+// Medium devices
+@media (min-width: 768px) {  
+    html {
+        font-size: $font-size-md;
+    }
+}
+
+// Large devices
+@media (min-width: 992px) { 
+    html {
+        font-size: $font-size-lg;
+    }
+}
+
+// Extra large devices
+@media (min-width: 1200px) {  
+    html {
+        font-size: $font-size-xl;
+    }
+}

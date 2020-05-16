@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../partials/head.ejs") %>
+
+        <link rel="stylesheet" href="static/css/index.css">
+    </head>
+    <body>
+        <%- include("../partials/nav.ejs") %>
+
+        <main role="main">
+            <div id="banner" class="container-fluid text-center">
+                <img class="img-fluid" src="static/img/LogoBlue1920x1080.png" alt="Blue Logo">
+            </div>
+            <div id="subbanner" class="container-fluid row text-center d-none d-md-flex">
+                <div class="col">
+                    <img class="img-fluid" src="static/img/phone256x256-white.png" alt="Phone: ">
+                    <p><%= contact.phone %></p>
+                </div>
+                <div class="col">
+                    <img class="img-fluid" src="static/img/mail256x256-white.png" alt="Email: ">
+                    <p><%= contact.email %></p>
+                </div>
+            </div>
+            <div class="container-fluid p-5">
+                <h1 class="text-center mb-4">This is a large header</h1>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque facilisis
+                    sollicitudin metus, at pharetra sapien gravida ac. Duis ac mauris erat. Sed
+                    feugiat feugiat augue, id pellentesque mauris euismod non. Sed porta sapien a
+                    risus consequat aliquet. Curabitur efficitur justo et rutrum efficitur. Fusce
+                    tristique interdum ante vitae pharetra. Aliquam cursus egestas porta. Nulla non
+                    lacinia diam, a placerat lorem. Cras mi felis, luctus a enim eget, mattis
+                    consequat risus. Etiam tristique feugiat maximus.</p>
+            </div>
+            <div class="container-fluid px-5 pb-5">
+                <h1 class="text-center mb-3">Basic Services</h1>
+                <p class="text-center mb-5">Suspendisse et interdum nisl. Curabitur sit amet nunc
+                    sem. Fusce auctor faucibus purus id mollis. Vestibulum in efficitur odio.
+                    Vestibulum ac erat vel lectus sodales eleifend. Fusce sit amet nisl nec leo
+                    sollicitudin dignissim. Donec porta enim velit, quis lobortis metus porta
+                    vel.</p>
+                <div class="card-deck text-center">
+                    <div class="card shadow-sm mx-4 card-override">
+                        <div class="card-header">
+                            <h5 class="my-0">Basic Interior</h5>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title pricing-card-title">
+                                $<%= pricing.basic_interior %>
+                            </h2>
+                            <ul class="list-unstyled">
+                                <li>Praesent vel euismod ex. Curabitur hendrerit diam</li>
+                                <li>Service 2</li>
+                                <li>Service 3</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary btn-sm btn-block btn-color">Click Me</button>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mx-4 card-override">
+                        <div class="card-header">
+                            <h5 class="my-0">Basic Exterior</h5>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title pricing-card-title">
+                                $<%= pricing.basic_exterior %>
+                            </h2>
+                            <ul class="list-unstyled">
+                                <li>Praesent vel euismod ex. Curabitur hendrerit diam</li>
+                                <li>Service 2</li>
+                                <li>Service 3</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary btn-sm btn-block btn-color">Click Me</button>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mx-4 card-override">
+                        <div class="card-header">
+                            <h5 class="my-0">Basic Full Car</h5>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title pricing-card-title">
+                                $<%= pricing.basic_full_car %>
+                            </h2>
+                            <ul class="list-unstyled">
+                                <li>Service 1</li>
+                                <li>Service 2</li>
+                                <li>Service 3</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary btn-sm btn-block btn-color">Click Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid pl-5 pr-5 pb-5">
+                <h1 class="text-center mb-3">Complete Services</h1>
+                <p class="text-center">(coming soon)</p>
+            </div>
+            <div class="container-fluid pl-5 pr-5 pb-5">
+                <h1 class="text-center mb-3">Specialty Services</h1>
+                <p class="text-center">(coming soon)</p>
+            </div>
+        </main>
+
+        <%- include("../partials/footer.ejs") %>
+    </body>
+</html>
