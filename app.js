@@ -1,4 +1,5 @@
 const express = require("express");
+const fs = require("fs");
 const path = require("path");
 const sassMiddleware = require("node-sass-middleware");
 require("dotenv").config();
@@ -26,7 +27,7 @@ app.get("/", function(req, res) {
         contact: {
             phone: "(920) 918-6473",
             email: "josiahrondeau@gmail.com",
-            square_link: "https://square.site/book/0J0ATY1KQYSS5/precise-mobile-llc-random-lake-wi"
+            link: "/contact"
         },
         packages: [
             {
@@ -119,6 +120,44 @@ app.get("/", function(req, res) {
         ]
     });
 });
+
+app.get("/contact", function(req, res) {
+    res.render("pages/contact", {
+        contact: {
+            phone: "(920) 918-6473",
+            email: "josiahrondeau@gmail.com",
+        }
+    });
+});
+
+app.get("/gallery", function(req, res) {
+    res.render("pages/gallery", {
+        contact: {
+            phone: "(920) 918-6473",
+            email: "josiahrondeau@gmail.com",
+        },
+        images: getImages(path.join(__dirname, "/static/img/gallery"))
+    });
+});
+
+// Get images from gallery
+function getImages(dirPath) {
+
+    let images = [];
+    let files = fs.readdirSync(dirPath);
+
+    files.forEach(function(file) {
+        let filePath = path.join(dirPath, file);
+        
+        let stat = fs.statSync(filePath);
+
+        if (stat && stat.isFile() && ['.jpg', '.png'].indexOf(path.extname(filePath)) != -1) {
+            images.push(path.relative(__dirname, filePath));
+        }
+    });
+
+    return images;
+}
 
 // Start serving files, IP defaults to 127.0.0.1
 app.listen(port, () => console.log(`Server listening at http://127.0.0.1:${port}/`));
