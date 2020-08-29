@@ -9,7 +9,11 @@
         <%- include("../partials/nav.ejs") %>
 
         <main role="main">
-            <h1 class="mt-5" style="text-align: center">Sorry, this page is still under construction :(</h1>
+            <div class="m-5">
+                <h1>Give us a call or shoot us an email</h1>
+                <h5 class="mt-3">Phone: <%= contact.phone %></h5>
+                <h5 class="mt-3">Email: <%= contact.email %></h5>
+            </div>
         </main>
         
         <%- include("../partials/footer.ejs") %>
