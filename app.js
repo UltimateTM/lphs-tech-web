@@ -26,7 +26,7 @@ app.get("/", function(req, res) {
     res.render("pages/index", {
         contact: {
             phone: "(920) 918-6473",
-            email: "josiahrondeau@gmail.com",
+            email: "precisemobileservices@gmail.com",
             link: "/contact"
         },
         packages: [
@@ -125,7 +125,7 @@ app.get("/contact", function(req, res) {
     res.render("pages/contact", {
         contact: {
             phone: "(920) 918-6473",
-            email: "josiahrondeau@gmail.com",
+            email: "precisemobileservices@gmail.com",
         }
     });
 });
@@ -134,7 +134,7 @@ app.get("/gallery", function(req, res) {
     res.render("pages/gallery", {
         contact: {
             phone: "(920) 918-6473",
-            email: "josiahrondeau@gmail.com",
+            email: "precisemobileservices@gmail.com",
         },
         images: getImages(path.join(__dirname, "/static/img/gallery"))
     });
