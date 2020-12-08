@@ -1,2 +1,2 @@
-# precise-mds-web
-Precise Mobile Detail Service Webpage
+# lphs-tech-web
+Future LPHS Tech Club web page
