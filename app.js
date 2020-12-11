@@ -81,7 +81,7 @@ function getImages(dirPath) {
         
         let stat = fs.statSync(filePath);
 
-        if (stat && stat.isFile() && ['.jpg', '.png'].indexOf(path.extname(filePath)) != -1) {
+        if (stat && stat.isFile() && ['.jpg', '.png', '.PNG'].indexOf(path.extname(filePath)) != -1) {
             images.push(path.relative(__dirname, filePath));
         }
     });
