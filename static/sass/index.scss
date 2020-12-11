@@ -1,23 +1,23 @@
-$carolina-blue: #42A2E2;
-$prussian-blue: #003459;
+$lp-red:        #ed1c24;
+$lp-green:      #0ba14b;
 $gainsboro:     #DCE1E9;
 $ash-grey:      #B4B8AB;
 $ivory:         #F4F9E9;
 
-$banner-max-height: 500px;
+$banner-max-height: 200px;
 
 .btn-color {
-    background-color: $prussian-blue;
-    border-color: $prussian-blue;
+    background-color: $lp-green;
+    border-color: $lp-green;
 }
 
 .btn-color:hover {
     background-color: $gainsboro;
-    color: $prussian-blue;
+    color: $lp-green;
 }
 
 #banner {
-    background-color: $carolina-blue;
+    background-color: $lp-red;
     max-height: $banner-max-height;
     padding: 0;
 }
@@ -30,9 +30,9 @@ $banner-max-height: 500px;
     margin: 0;
     padding-left:   18%;
     padding-right:  18%;
-    padding-top:    20px;
-    padding-bottom: 20px;
-    background-color: $prussian-blue;
+    padding-top:    10px;
+    padding-bottom: 10px;
+    background-color: $lp-green;
     color: white;
 }
 
@@ -54,7 +54,7 @@ $banner-max-height: 500px;
 }
 
 .card-header {
-    background-color: $carolina-blue;
+    background-color: $lp-red;
     color: white;
 }
 

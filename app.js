@@ -25,116 +25,46 @@ app.use("/static", express.static(path.join(__dirname, "/static")));
 app.get("/", function(req, res) {
     res.render("pages/index", {
         contact: {
-            phone: "(920) 918-6473",
-            email: "precisemobileservices@gmail.com",
+            phone: [
+                "(123) 456-7891",
+                "(123) 456-7891",
+            ],
+            email: [
+                "zkoesler@lphs.net",
+                "awiercinski@lphs.net",
+            ],
             link: "/contact"
         },
-        packages: [
-            {
-                name: "Basic Interior",
-                services: [
-                    "Surface Dusting and UV Protection",
-                    "Air Vent Dusting",
-                    "Interior Glass Polish",
-                    "Interior Vacuum",
-                    "Sun Roof and Gauge Cluster Polish",
-                    "Door Jamb Wipe Down",
-                    "Fragrance Application"
-                ],
-                prices: [
-                    {
-                        name: "Coupe/Sedan",
-                        cost: 49,
-                    },
-                    {
-                        name: "Light Truck/SUV",
-                        cost: 59,
-                    },
-                    {
-                        name: "Full Size Truck",
-                        cost: 69,
-                    },
-                    {
-                        name: "Full Size SUV",
-                        cost: 79,
-                    }
-                ]
-            },
-            {
-                name: "Basic Exterior",
-                services: [
-                    "Liquid Carnauba Wax",
-                    "Exterior Glass Polish", 
-                    "Steam Wash",
-                    "Steam Clean Wheels and Tires",
-                    "Tire Dress"
-                ],
-                prices: [
-                    {
-                        name: "Coupe/Sedan",
-                        cost: 49,
-                    },
-                    {
-                        name: "Light Truck/SUV",
-                        cost: 59,
-                    },
-                    {
-                        name: "Full Size Truck",
-                        cost: 69,
-                    },
-                    {
-                        name: "Full Size SUV",
-                        cost: 79,
-                    }
-                ]
-            },
-            {
-                name: "Basic Full Car",
-                services: [
-                    "All Basic Interior Services",
-                    "All Basic Exterior Services"
-                ],
-                prices: [
-                    {
-                        name: "Coupe/Sedan",
-                        cost: 89,
-                        link: ""
-                    },
-                    {
-                        name: "Light Truck/SUV",
-                        cost: 109,
-                        link: ""
-                    },
-                    {
-                        name: "Full Size Truck",
-                        cost: 129,
-                        link: ""
-                    },
-                    {
-                        name: "Full Size SUV",
-                        cost: 139,
-                        link: ""
-                    }
-                ]
-            },
-        ]
+
     });
 });
 
 app.get("/contact", function(req, res) {
     res.render("pages/contact", {
         contact: {
-            phone: "(920) 918-6473",
-            email: "precisemobileservices@gmail.com",
+            phone: [
+                "(123) 456-7891",
+                "(123) 456-7891",
+            ],
+            email: [
+                "zkoesler@lphs.net",
+                "awiercinski@lphs.net",
+            ],
         }
     });
 });
 
-app.get("/gallery", function(req, res) {
-    res.render("pages/gallery", {
+app.get("/club_members", function(req, res) {
+    res.render("pages/club_members", {
         contact: {
-            phone: "(920) 918-6473",
-            email: "precisemobileservices@gmail.com",
+            phone: [
+                "(123) 456-7891",
+                "(123) 456-7891",
+            ],
+            email: [
+                "zkoesler@lphs.net",
+                "awiercinski@lphs.net",
+            ],
         },
         images: getImages(path.join(__dirname, "/static/img/gallery"))
     });

@@ -1,6 +1,9 @@
 # Ignore Compiled CSS
 static/css/
 
+# Repl Ignore
+.replit
+
 #idea
 .idea/
 
