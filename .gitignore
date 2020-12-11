@@ -4,6 +4,9 @@ static/css/
 # Repl Ignore
 .replit
 
+#idea
+.idea/
+
 
 # Logs
 logs
